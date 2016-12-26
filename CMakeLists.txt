@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(gui)
+project(minip_gui)
 
 find_package(catkin REQUIRED COMPONENTS
   roscpp
@@ -24,6 +24,6 @@ ${GTKMM_INCLUDE_DIRS})
 
 add_definitions(${GTKMM_CFLAGS_OTHER})
 
-add_executable(gui src/gui.cpp)
+add_executable(minip_gui src/minip_gui.cpp)
 
-target_link_libraries(gui ${catkin_LIBRARIES} ${roscpp_LIBRARIES} ${GTKMM_LIBRARIES})
+target_link_libraries(minip_gui ${catkin_LIBRARIES} ${roscpp_LIBRARIES} ${GTKMM_LIBRARIES})

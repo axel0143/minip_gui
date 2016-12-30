@@ -1,7 +1,5 @@
 #include <ros/ros.h>
 #include <gtkmm.h>
-#include <iostream>
-#include <sstream>
 #include <std_msgs/Int8.h>
 
 using namespace std;
@@ -14,7 +12,7 @@ void on_blueButton_click()
 	std_msgs::Int8 msg;
 	msg.data = 0;
 	chatter_pub.publish(msg);
-	cout << "Blue goal sent." << endl;
+	ROS_INFO("Blue goal sent.");
 }
 
 void on_redButton_click()
@@ -22,7 +20,7 @@ void on_redButton_click()
 	std_msgs::Int8 msg;
 	msg.data = 1;
 	chatter_pub.publish(msg);
-	cout << "Red goal sent." << endl;
+	ROS_INFO("Red goal sent.");
 }
 
 void on_pinkButton_click()
@@ -30,7 +28,7 @@ void on_pinkButton_click()
 	std_msgs::Int8 msg;
 	msg.data = 2;
 	chatter_pub.publish(msg);
-	cout << "Pink goal sent." << endl;
+	ROS_INFO("Pink goal sent.");
 }	
 
 void on_yellowButton_click()
@@ -38,7 +36,7 @@ void on_yellowButton_click()
 	std_msgs::Int8 msg;
 	msg.data = 3;
 	chatter_pub.publish(msg);
-	cout << "Yellow goal sent." << endl;
+	ROS_INFO("Yellow goal sent.");
 }
 
 int main (int argc, char *argv[])

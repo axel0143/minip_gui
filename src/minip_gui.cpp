@@ -2,7 +2,6 @@
 #include <gtkmm.h>
 #include <std_msgs/Int8.h>
 
-using namespace std;
 using namespace Gtk;
 
 ros::Publisher chatter_pub;
